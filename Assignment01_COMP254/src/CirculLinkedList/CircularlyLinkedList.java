@@ -93,16 +93,18 @@ public class CircularlyLinkedList<E> {
 		return head.getElement();
 	}
 
-	public void show() {
-		if (isEmpty())
-			System.out.println("List is empty");
-		else {
-			
-			Node<E> current = tail;
-			while (current != null) {
-				System.out.println(current.getElement());
-				current = current.getNext();
-			}
+	public void print() {
+		System.out.print("Circular Linked List:");
+		Node temp = tail;
+		if (size <= 0) {
+			System.out.print("List is empty");
+		} else {
+			do {
+				System.out.print(" " + temp.element);
+				temp = temp.next;
+			} while (temp != tail);
 		}
+		System.out.println();
 	}
+
 }
