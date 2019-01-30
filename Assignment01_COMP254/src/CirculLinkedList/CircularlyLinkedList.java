@@ -107,4 +107,22 @@ public class CircularlyLinkedList<E> {
 		System.out.println();
 	}
 
+	public CircularlyLinkedList<E> clone() throws CloneNotSupportedException 
+	{
+		CircularlyLinkedList<E> other = (CircularlyLinkedList<E>) super.clone();
+		if (size > 0) {
+			other.tail = new Node<>(tail.getElement(), null);
+			Node<E> walk = tail.getNext();
+			Node<E> otherTail = other.tail;
+			while (walk != null) {
+				Node<E> newest = new Node<>(walk.getElement(), null);
+				otherTail.setSet(newest);
+				otherTail = newest;
+				walk = walk.getNext();
+			}
+
+		}
+		return other;
+	}
+
 }
