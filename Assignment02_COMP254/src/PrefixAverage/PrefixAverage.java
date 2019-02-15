@@ -48,7 +48,7 @@ class PrefixAverage {
 		long start, end, run;
 		double [] x=new double[10000];
 		start=System.currentTimeMillis();
-		prefixAverage1(x);
+		prefixAverage2(x);
 		end=System.currentTimeMillis();
 		run=end-start;
 		System.out.println(run);
