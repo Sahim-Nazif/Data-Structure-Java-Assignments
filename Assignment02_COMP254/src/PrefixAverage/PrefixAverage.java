@@ -41,16 +41,18 @@ class PrefixAverage {
 		return a;
 	}
 
-	// this was added by me to check if it is working
+	
 
 	public static void main(String[] args) {
-		double[] array = { 12 };
-		double[] c;
-
-		c = prefixAverage1(array);
-
-		// b=prefixAverage1(array);
-		System.out.println(c);
+	
+		long start, end, run;
+		double [] x=new double[10000];
+		start=System.currentTimeMillis();
+		prefixAverage1(x);
+		end=System.currentTimeMillis();
+		run=end-start;
+		System.out.println(run);
+		
 
 	}
 }

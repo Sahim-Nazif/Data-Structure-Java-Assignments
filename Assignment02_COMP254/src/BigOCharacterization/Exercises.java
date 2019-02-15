@@ -1,7 +1,7 @@
 package BigOCharacterization;
 
- /*  Student Name: Nazif Sahim
- Student ID: 300886750
+ /* Student: Nazif Sahim
+
  Description: Assignment 2
  Course: COMP254
  Instructor: Reza Dibaj
