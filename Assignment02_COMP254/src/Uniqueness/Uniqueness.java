@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Uniqueness {
 
-	public static boolean unique1(int[] data) {
-		int n = data.length;
+	public static boolean unique1(int[] data, int n) {
+		
 		for (int j = 0; j < n - 1; j++)
 			for (int k = j + 1; k < n; k++)
 				if (data[j] == data[k])
@@ -14,8 +14,8 @@ public class Uniqueness {
 	}
 
 	/** Returns true if there are no duplicate elements in the array. */
-	public static boolean unique2(int[] data) {
-		int n = data.length;
+	public static boolean unique2(int[] data, int n) {
+		
 		int[] temp = Arrays.copyOf(data, n); // make copy of data
 		Arrays.sort(temp); // and sort the copy
 		for (int j = 0; j < n - 1; j++)
@@ -33,7 +33,7 @@ public class Uniqueness {
 		
 		int i;
 		for (i=0; i<amountArray; i++) {
-			data[i]=amountArray-1+1;
+			data[i]=amountArray-i+1;
 			
 			
 		}
@@ -41,9 +41,15 @@ public class Uniqueness {
 		i=1;
 		totalTime=0;
 		
-		while(totalTime/Math.pow(10, 6)<1) {
-			
+		while(totalTime/Math.pow(10, 6)<1) 
+		{
+			startTime=System.nanoTime();
+			unique1(data,i);
+			endTime=System.nanoTime();
+			totalTime=endTime-startTime;
+			i++;
 		}
+		System.out.println("n in unique1 is :" + i);
 			
 	
 
