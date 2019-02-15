@@ -9,24 +9,30 @@ public class Uniqueness {
 		for (int j = 0; j < n - 1; j++)
 			for (int k = j + 1; k < n; k++)
 				if (data[j] == data[k])
-					return false; // found duplicate pair
-		return true; // if we reach this, elements are unique
+					return false; 
+		return true; 
 	}
 
-	/** Returns true if there are no duplicate elements in the array. */
+	
 	public static boolean unique2(int[] data, int n) {
 		
-		int[] temp = Arrays.copyOf(data, n); // make copy of data
-		Arrays.sort(temp); // and sort the copy
+		int[] temp = Arrays.copyOf(data, n); 
+		Arrays.sort(temp);
 		for (int j = 0; j < n - 1; j++)
-			if (temp[j] == temp[j + 1]) // check neighboring entries
-				return false; // found duplicate pair
-		return true; // if we reach this, elements are unique
+			if (temp[j] == temp[j + 1]) 
+				return false;
+		return true; 
 	}
 
 	public static void main(String[] args) {
-		
+	//the code is only for testing the biggest value of n. Not for the uniqueness of the
+		//array elements.
 		long startTime, endTime,totalTime;
+		int [] a= {10,12,14,15,16};
+		
+		boolean b;
+		b=unique1(a,2);
+		System.out.println(b);
 		//checking the time
 		int amountArray=(int)Math.pow(2, 20);
 		int data[]=new int [amountArray];
@@ -49,9 +55,20 @@ public class Uniqueness {
 			totalTime=endTime-startTime;
 			i++;
 		}
-		System.out.println("n in unique1 is :" + i);
+		System.out.println(" value of n in unique1 is :" + i);
 			
-	
+		i=1;
+		totalTime=0;
+		
+		while(totalTime/Math.pow(10, 6)<1) 
+		{
+			startTime=System.nanoTime();
+			unique1(data,i);
+			endTime=System.nanoTime();
+			totalTime=endTime-startTime;
+			i++;
+		}
+		System.out.println(" value of n in unique 2 is :" + i);
 
 	}
 
