@@ -2,7 +2,7 @@ package Plaindrome;
 
 import java.util.Scanner;
 /*Assignment Question 2:
- * Recursive Java method that determines if a string s is a palindrome, that is, it is equal
+ * Recursive Java method that determines if a string  is a palindrome, that is, it is equal
  * to its reverse.
  */
 
