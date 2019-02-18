@@ -1,8 +1,13 @@
 package Plaindrome;
 
+import java.util.Scanner;
+
 public class Plaindrome {
 
 	public static void main(String[] args) {
+		
+		Scanner reader= new Scanner (System.in);
+		
 		
 		
 		
