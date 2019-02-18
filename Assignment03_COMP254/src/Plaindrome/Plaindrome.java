@@ -1,6 +1,10 @@
 package Plaindrome;
 
 import java.util.Scanner;
+/*Assignment Question 2:
+ * Recursive Java method that determines if a string s is a palindrome, that is, it is equal
+ * to its reverse.
+ */
 
 public class Plaindrome {
 
@@ -12,8 +16,8 @@ public class Plaindrome {
 
 		System.out.println("Is a plaindrome : " + "  " + input + "  " + isPlaindrome(input));
 		System.out.print("Please center another string : ");
-		input=reader.nextLine();
-		
+		input = reader.nextLine();
+
 		System.out.println("Is a plaindrome : " + "  " + input + "  " + isPlaindrome(input));
 		reader.close();
 
