@@ -7,6 +7,11 @@ public class Plaindrome {
 	public static void main(String[] args) {
 		
 		Scanner reader= new Scanner (System.in);
+		System.out.print("Please enter a string : ");
+		String input=reader.nextLine();
+		
+		System.out.print("Is a plaindrome : " + input + isPlaindrome(input));
+		
 		
 		
 		
@@ -15,7 +20,7 @@ public class Plaindrome {
 	}
 	
 	//Declaring a recursive boolean function
-	public static boolean isPliandrom(String input) {
+	public static boolean isPlaindrome(String input) {
 		if (input==null ||input.isEmpty()) {
 			return true;
 		}
