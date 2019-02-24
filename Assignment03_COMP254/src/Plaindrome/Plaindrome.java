@@ -15,11 +15,11 @@ public class Plaindrome {
 		System.out.print("Please enter a string : ");
 		String input = reader.nextLine();
 
-		System.out.println("Is a plaindrome : " + "  " + input + "  " + isPlaindrome(input));
-		System.out.print("Please center another string : ");
+		System.out.println("\nIs a plaindrome : " + "  " + input + "  " + isPlaindrome(input));
+		System.out.print("\nPlease center another string : ");
 		input = reader.nextLine();
 
-		System.out.println("Is a plaindrome : " + "  " + input + "  " + isPlaindrome(input));
+		System.out.println("\nIs a plaindrome : " + "  " + input + "  " + isPlaindrome(input));
 		reader.close();
 
 	}
