@@ -11,6 +11,7 @@ public class Plaindrome {
 	public static void main(String[] args) {
 
 		Scanner reader = new Scanner(System.in);
+		System.out.println("\n======================");
 		System.out.print("Please enter a string : ");
 		String input = reader.nextLine();
 
