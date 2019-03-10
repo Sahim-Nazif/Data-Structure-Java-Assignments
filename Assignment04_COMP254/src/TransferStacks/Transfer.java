@@ -7,11 +7,12 @@ import java.util.Stack;
 public class Transfer {
 
     public static Stack<Integer> stackPush(Stack<Integer> stack){
-
+        System.out.println("First stack elements ");
         for(int i = 0; i < 5; i++){
 
             Integer push = (Integer) stack.push(i);
 
+           
             System.out.println(push);
         }
         return stack;
@@ -61,7 +62,7 @@ public class Transfer {
 
 
         T_stack = stackPush(S_stack);
-
+        System.out.println("Transformation from S_stack to T_stack ");
         System.out.println("Stack transfered successfully: "+ T_stack);
 
         return T_stack;
