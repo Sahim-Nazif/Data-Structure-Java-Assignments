@@ -10,7 +10,7 @@ public static void main(String[] args)
 	HobbyLinkedlist hobby = new HobbyLinkedlist(); 
    
    hobby.push("Programming"); 
-   hobby.push("Reading"); 
+   hobby.push("Movies"); 
    hobby.push("Playing Cricket");
 
  System.out.println("\nDislay my hobbies");
