@@ -13,8 +13,8 @@ public class Books {
 		System.out.println("\n--------------------------");
 		
 		favoriteBooks.add("The Great Game");
-		favoriteBooks.add("ASP.Net MVC5");
-		favoriteBooks.add("Programming with Joe");
+		favoriteBooks.add("In search of the lost time");
+		favoriteBooks.add("Programming with Khan");
 		favoriteBooks.add("You were called");
 		favoriteBooks.add("Arrival to Kenya");
 		
