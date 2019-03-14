@@ -16,7 +16,7 @@ public class Books {
 		favoriteBooks.add("In search of the lost time");
 		favoriteBooks.add("Programming with Khan");
 		favoriteBooks.add("You were called");
-		favoriteBooks.add("Arrival to Kenya");
+		favoriteBooks.add("Arrival to nowhere");
 		
 		for (String books: favoriteBooks) {
 			System.out.println(books);
