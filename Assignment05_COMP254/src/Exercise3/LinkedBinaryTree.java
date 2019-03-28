@@ -309,7 +309,7 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
 		LinkedBinaryTree lbt = new LinkedBinaryTree();
 		Position<String> root = lbt.addRoot("ICET");
 
-		//
+		System.out.println("------------------------------------------");
 		Position<String> softwarePosition = lbt.addLeft(root, "Software");
 		Position<String> networkingPosition = lbt.addRight(root, "Networking");
 		Position<String> set = lbt.addLeft(softwarePosition, "SET");
@@ -317,7 +317,8 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
 
 		//
 		printPreorder(lbt);
-		System.out.println("After in order");
+		System.out.println("\n--------------------------");
+		System.out.println("After the In order Traversal");
 		lbt.inOrderNext((Node) softwarePosition);
 
 	}
@@ -325,7 +326,9 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
 	//
 	public static <E> void printPreorder(AbstractTree<E> T) {
 		for (Position<E> p : T.preorder())
+		
 			System.out.println(p.getElement());
+
 	}//
 
 } // ----------- end of LinkedBinaryTree class -----------
