@@ -5,7 +5,7 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
 	// ---------------- nested Node class ----------------
 	/** Nested static class for a binary tree node. */
 	protected static class Node<E> implements Position<E> {
-		private E element; // an element stored at this node
+		private E element;  // an element stored at this node
 		private Node<E> parent; // a reference to the parent node (if any)
 		private Node<E> left; // a reference to the left child (if any)
 		private Node<E> right; // a reference to the right child (if any)
