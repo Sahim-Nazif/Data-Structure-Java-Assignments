@@ -50,7 +50,7 @@ public class MinInHeap {
 		items[indexOne] = items[indexTwo];
 		items[indexTwo] = temp;
 	}
-//this method will check if array is full, if so it creates new array
+//This method will check if array is full, if so it creates new array
 //double of the size and copies all the elements over
 	private void ensureExtractCapacity() {
 		if (size == capacity) {
