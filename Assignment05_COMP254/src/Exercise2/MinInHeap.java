@@ -97,7 +97,7 @@ public class MinInHeap {
 	}
 
 //method will print the array in the console
-	public void printQueue() {
+	public void printPriorityQueue() {
 		for (int i = 0; i < size; i++) {
 			System.out.println(items[i] + " ");
 		}
