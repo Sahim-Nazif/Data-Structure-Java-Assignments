@@ -1,7 +1,10 @@
 package Exercise2;
 
 public class Tester {
-
+/*
+ * Based on Professor instruction as part of the assignment: Two methods added to the MinInHeap
+ * Remove (), PrintPriorityQueue Method and Runner method to test the functionality.
+ */
 	public static void main(String[] args) {
     	MinInHeap minInHeap= new MinInHeap();
     	System.out.println("\nAdding elements to the Min Priority Queue Array");
@@ -20,9 +23,6 @@ public class Tester {
 		System.out.println("-------------------------------------------");
 		minInHeap.remove();
 		minInHeap.printPriorityQueue();
-		
-		
-
 		
 	}
 
