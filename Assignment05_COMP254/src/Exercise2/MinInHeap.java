@@ -6,7 +6,7 @@ public class MinInHeap {
 
 	private int capacity = 10;
 	private int size = 0;
-    //creating an array of fixed length
+	// creating an array of fixed length
 	int[] items = new int[capacity];
 
 	private int getLeftChildIndex(int parentIndex) {
@@ -50,6 +50,7 @@ public class MinInHeap {
 		items[indexOne] = items[indexTwo];
 		items[indexTwo] = temp;
 	}
+
 //This method will check if array is full, if so it creates new array
 //double of the size and copies all the elements over
 	private void ensureExtractCapacity() {
@@ -58,6 +59,7 @@ public class MinInHeap {
 			capacity *= 2;
 		}
 	}
+
 //the peek method will check if array is empty, it will return exception
 //other it will return the first element of the array
 	public int peek() {
@@ -66,6 +68,7 @@ public class MinInHeap {
 		return items[0];
 
 	}
+
 //this method will remove the first element and get the last element to the root
 	public int poll() {
 		if (size == 0)
@@ -73,7 +76,7 @@ public class MinInHeap {
 		int item = items[0];
 		items[0] = items[size - 1];
 		size--;
-		//heapifydown will sort it back in order
+		// heapifydown will sort it back in order
 		heapifyDown();
 		return item;
 	}
@@ -82,15 +85,18 @@ public class MinInHeap {
 		ensureExtractCapacity();
 		items[size] = item;
 		size++;
+		// swap each element with its parents
 		heapifyUp();
 
 	}
 
+//this method will remove last element from the tree
 	public int remove() {
 		return items[--size];
 
 	}
 
+//method will print the array in the console
 	public void printQueue() {
 		for (int i = 0; i < size; i++) {
 			System.out.println(items[i] + " ");
