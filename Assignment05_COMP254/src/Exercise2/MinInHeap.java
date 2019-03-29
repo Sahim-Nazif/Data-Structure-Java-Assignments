@@ -58,20 +58,22 @@ public class MinInHeap {
 			capacity *= 2;
 		}
 	}
-
+//the peek method will check if array is empty, it will return exception
+//other it will return the first element of the array
 	public int peek() {
 		if (size == 0)
 			throw new IllegalStateException();
 		return items[0];
 
 	}
-
+//this method will remove the first element and get the last element to the root
 	public int poll() {
 		if (size == 0)
 			throw new IllegalStateException();
 		int item = items[0];
 		items[0] = items[size - 1];
 		size--;
+		//heapifydown will sort it back in order
 		heapifyDown();
 		return item;
 	}
