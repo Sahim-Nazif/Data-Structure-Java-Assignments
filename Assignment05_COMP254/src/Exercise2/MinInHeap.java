@@ -90,7 +90,7 @@ public class MinInHeap {
 
 	}
 
-//this method will remove last element from the tree
+//this method will remove an element from the end tree
 	public int remove() {
 		return items[--size];
 

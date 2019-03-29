@@ -14,6 +14,14 @@ public class Tester {
 		minInHeap.printPriorityQueue();
 		System.out.println("Checking for the poll () function");
 		System.out.println("---------------------------------");
+		minInHeap.poll();
+		minInHeap.printPriorityQueue();
+		System.out.println("\nRemoving an element at the end of the tree");
+		System.out.println("-------------------------------------------");
+		minInHeap.remove();
+		minInHeap.printPriorityQueue();
+		
+		
 
 		
 	}
