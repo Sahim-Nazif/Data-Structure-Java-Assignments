@@ -19,6 +19,7 @@ public class HashMapLibary {
 		//Creating and returning set view
 		Set<Map.Entry<String, Integer>> setView=hashmap.entrySet();
 		
+		//iterate through all the element and print
 		for(Map.Entry<String, Integer>em:setView)
 		{
 		 System.out.print(em.getKey() + " : ");
