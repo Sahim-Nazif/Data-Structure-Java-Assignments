@@ -6,7 +6,7 @@ import java.util.Map;
 public class HashmapEnum {
 
 	enum KeyType {
-		Laptop, PC, Mobile;
+		Laptop, Tablet, Mobile;
 
 	}
 
