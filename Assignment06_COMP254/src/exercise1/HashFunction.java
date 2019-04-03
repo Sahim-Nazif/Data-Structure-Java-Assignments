@@ -25,23 +25,23 @@ public class HashFunction {
 			theArray[Integer.parseInt(newElementVal)] = newElementVal;
 		}
 	}
+
 	public void hashFunction2(String[] stringsForArray, String[] theArray) {
 		for (int n = 0; n < stringsForArray.length; n++) {
 			String newElementVal = stringsForArray[n];
-			int arrayIndex=Integer.parseInt(newElementVal)%29;
+			int arrayIndex = Integer.parseInt(newElementVal) % 29;
 			System.out.println("Moduls Index= " + arrayIndex + " for value " + newElementVal);
-			while (theArray[arrayIndex] !="-1") {
+			while (theArray[arrayIndex] != "-1") {
 				++arrayIndex;
 				System.out.println("Collision Try  " + arrayIndex + " Instead");
-				arrayIndex%=arraySize;
-								
+				arrayIndex %= arraySize;
+
 			}
-			theArray[arrayIndex]=newElementVal;
-			
-			
+			theArray[arrayIndex] = newElementVal;
+
 		}
 	}
-	
+
 // print the element
 	public void displayHash() {
 
@@ -93,22 +93,23 @@ public class HashFunction {
 		}
 
 	}
-	//find an element stored in the array
-	public String findKeyString (String key) {
-		//find the keys original hash key
-		int arrayIndexHash=Integer.parseInt(key)%29;
-		while (theArray[arrayIndexHash]!="-1") {
-			if (theArray[arrayIndexHash]==key) {
-				//found the key so return it 
+
+	// find an element stored in the array
+	public String findKeyString(String key) {
+		// find the keys original hash key
+		int arrayIndexHash = Integer.parseInt(key) % 29;
+		while (theArray[arrayIndexHash] != "-1") {
+			if (theArray[arrayIndexHash] == key) {
+				// found the key so return it
 				System.out.println(key + " was found in index " + arrayIndexHash);
 				return theArray[arrayIndexHash];
 			}
-			//look in the next index
+			// look in the next index
 			++arrayIndexHash;
-			//if we get to the end of the array go back to index 0
-			arrayIndexHash %=arraySize;
+			// if we get to the end of the array go back to index 0
+			arrayIndexHash %= arraySize;
 		}
-		//coundn't locate they key
+		// coundn't locate they key
 		return null;
 	}
 }
