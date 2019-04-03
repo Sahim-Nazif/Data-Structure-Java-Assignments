@@ -42,7 +42,7 @@ public class HashFunction {
 		}
 	}
 	
-
+// print the element
 	public void displayHash() {
 
 		int increment = 0;
@@ -92,5 +92,23 @@ public class HashFunction {
 
 		}
 
+	}
+	//find an element stored in the array
+	public String findKeyString (String key) {
+		//find the keys original hash key
+		int arrayIndexHash=Integer.parseInt(key)%29;
+		while (theArray[arrayIndexHash]!="-1") {
+			if (theArray[arrayIndexHash]==key) {
+				//found the key so return it 
+				System.out.println(key + " was found in index " + arrayIndexHash);
+				return theArray[arrayIndexHash];
+			}
+			//look in the next index
+			++arrayIndexHash;
+			//if we get to the end of the array go back to index 0
+			arrayIndexHash %=arraySize;
+		}
+		//coundn't locate they key
+		return null;
 	}
 }
