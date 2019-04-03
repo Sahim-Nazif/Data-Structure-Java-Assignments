@@ -6,9 +6,14 @@ public class Tester {
 		
 		HashFunction func= new HashFunction(30);
 		
-		String []elementsToAddStrings= {"1", "5","17","21","26"};
-		func.hashFunction1(elementsToAddStrings, func.theArray);
-		func.displayStack();
+		
+		
+		 String[] elementsToAdd = { "100", "510", "170", "214", "268", "398",
+			 	         "235", "802", "900", "723", "699", "1", "16", "999", "890",
+				          "725", "998", "978", "988", "990", "989", "984", "320", "321",
+				           "400", "415", "450", "50", "660", "624" };
+		func.hashFunction2(elementsToAdd, func.theArray);
+		func.displayHash();
 
 	}
 

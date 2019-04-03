@@ -25,8 +25,25 @@ public class HashFunction {
 			theArray[Integer.parseInt(newElementVal)] = newElementVal;
 		}
 	}
+	public void hashFunction2(String[] stringsForArray, String[] theArray) {
+		for (int n = 0; n < stringsForArray.length; n++) {
+			String newElementVal = stringsForArray[n];
+			int arrayIndex=Integer.parseInt(newElementVal)%29;
+			System.out.println("Moduls Index= " + arrayIndex + " for value " + newElementVal);
+			while (theArray[arrayIndex] !="-1") {
+				++arrayIndex;
+				System.out.println("Collision Try  " + arrayIndex + " Instead");
+				arrayIndex%=arraySize;
+								
+			}
+			theArray[arrayIndex]=newElementVal;
+			
+			
+		}
+	}
+	
 
-	public void displayStack() {
+	public void displayHash() {
 
 		int increment = 0;
 
