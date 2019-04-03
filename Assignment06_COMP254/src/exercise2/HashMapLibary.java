@@ -1,7 +1,9 @@
 package exercise2;
 
+import java.nio.charset.MalformedInputException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class HashMapLibary {
 
@@ -14,7 +16,14 @@ public class HashMapLibary {
 		hashmap.put("Asp.Net MVC", 85);
 		hashmap.put("Python Book", 55);
 		
+		//Creating and returning set view
+		Set<Map.Entry<String, Integer>> setView=hashmap.entrySet();
 		
+		for(Map.Entry<String, Integer>em:setView)
+		{
+		 System.out.print(em.getKey() + " : ");
+		 System.out.println(em.getValue());
+		}
 
 	}
 
