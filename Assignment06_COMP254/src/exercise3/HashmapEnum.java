@@ -15,7 +15,7 @@ public class HashmapEnum {
 		Map<KeyType, Integer> dataMap = new HashMap<KeyType, Integer>();
 		dataMap.put(KeyType.Laptop, 0);
 		dataMap.put(KeyType.Mobile, 1);
-		dataMap.put(KeyType.PC, 2);
+		dataMap.put(KeyType.Tablet, 2);
 
 		for (KeyType key : dataMap.keySet()) {
 			System.out.println(key + " -> " + dataMap.get(key));
